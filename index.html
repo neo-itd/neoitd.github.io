@@ -8,7 +8,12 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 	<style type="text/css">
-		body { font-family: 'Public Sans', sans-serif; color: black; }
+		body { 
+			font-family: 'Public Sans', sans-serif; 
+			color: black; 
+			width: 100vw;
+			height:100vh;
+		}
 		main{ 
 			padding: 72px;
 		}
@@ -21,28 +26,36 @@
 		}
 		header {  
 			padding: 36px;
-			position: fixed;
-			left: 0;
-			top: 24px;
-			width: 100vw;
+			width: auto;
 			display: flex; 
-			flex-direction:row; 	
+			flex-direction: row; 	
 		}
 		footer { 
 			padding: 36px;
 			position: fixed;
 			left:0;
 			bottom: 24px;
-			width: 100vw;
+			width: auto;
 			display: flex; 
-			flex-direction:column; 
+			flex-direction: column; 
 		}
-		footer > section > a { margin: 8px; }
-		a:link{ text-decoration: underline; color: inherit; }
-		a:visited{ color: gray; }
+		footer > section > a { 
+			margin: 8px; 
+		}
+		a:link{ 
+			text-decoration: underline; 
+			color: inherit; 
+		}
+		a:visited{ 
+			color: gray; 
+		}
 		a:focus{}
-		a:hover{ text-decoration: overline; }
-		a:active{ color: inherit; }
+		a:hover{ 
+			text-decoration: overline; 
+		}
+		a:active{ 
+			color: inherit; 
+		}
 	</style>
 </head>
 <body>
