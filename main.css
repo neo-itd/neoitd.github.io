@@ -1,14 +1,34 @@
-/* Date last modified: 2023 02 20*/
-/* main.css */
-/* Stylesheet for a main styling. */
+/* 
+    @name main.css 
+    @date 2023 02 20
+    @purpose Main style sheet.
+ */
 :root {
 	--defaultPadding: 24px;
 	--neoBlack: rgb(19,20,21);
 	--neoCanvas: rgb(253,254, 255);
+	--neoMatrix: rgb(140,255,165);
+}
+
+body { 
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	font-family: "Public Sans", sans-serif; 
+	color: var(--neoBlack);
+	text-align:center;
+	background: var(--neoCanvas);
+	box-sizing: content-box;
+}
+
+#window_open_for {
+	text-align: center;
+	vertical-align: baseline;
 }
 #body_message {
 	text-align: center;
-	font-size: 1.24rem;
+	font-size: calc(1.24rem + 0.24vw);
 	line-height: 1.24;
 	padding-left: 8px;
 	padding-right: 8px;
@@ -19,7 +39,6 @@
 	font-weight: 500;
 	width: auto;
 	border: 2px solid var(--neoBlack);
-	font-size: 1rem;
 	color: var(--neoBlack);
 	border-radius: 4px;
 	padding: 4px;
@@ -39,7 +58,8 @@
 	justify-content: center;
 }
 .dialog_box {
-	opacity: 94%;
+	font-size: calc(1rem + 0.15vw);
+	opacity: 97%;
 	z-index:10;
 	background: var(--neoCanvas);
 	color: var(--neoBlack);
@@ -53,15 +73,7 @@
 	border: 4px solid var(--neoBlack);
 }
 
-body { 
-	top: 0;
-	left: 0;
-	font-family: 'Public Sans', sans-serif; 
-	color: var(--neoBlack);
-	text-align:center;
-	background: var(--neoCanvas);
-	box-sizing: content-box;
-}
+
 
 main{ 
 	height: 100vh;
@@ -85,7 +97,7 @@ h1 {
 }
 
 .top_nav {
-	padding: var(--defaultPadding);
+	padding: calc(var(--defaultPadding)+0.25vw);
 	display: flex;
 	width: auto;
 	flex-wrap:wrap;
@@ -94,11 +106,19 @@ h1 {
 	align-items: center;
 	justify-content: center;
 }
+@media screen and (max-width: 675px){
+	.top_nav > section {
+		display:grid;
+		grid-template-rows: repeat(1, 1fr);
+		align-items: center;
+		justify-content: center;
+	}
+}
 
 #icon_img {
 	position: relative;
-	max-width: 20%;
-	max-height: 20%;
+	max-width: calc(10% + 0.25vw);
+	max-height: calc(10% + 0.25vh);
 }
 
 @keyframes rotate {
@@ -112,27 +132,33 @@ h1 {
 
 code {
 	text-transform: uppercase;
-	font-size: 0.72rem;
+	font-size: calc(0.84rem + 0.10vw);
 }
 
 #clock{
-	font-size: 9.36rem;
+	font-size: calc(4.64rem + 6.25vw);
 	font-weight: 125;
 	line-height: 0.88;
 }
 
 #headline{
-	font-size: 1.44rem;
-	font-weight: 420;
+	font-size: calc(1.72rem + 1.24vw);
+	font-weight: 500;
 	line-height: 0.88;
+	animation: 2.24s ease-in 1 fadeup;
+}
+@keyframes fadeup {
+	from {
+		opacity:0%;
+	}
+
+	to {
+		opacity: 100%;
+	}
 }
 
 p {
 	line-height: 1.08;
-}
-
-footer p {
-
 }
 
 #disclaimer {
@@ -149,31 +175,10 @@ header {
 	flex-direction: column; 	
 }
 
-footer { 
-	position: fixed;
-	display: flex; 
-	flex-direction: row; 
-	z-index: -1;
-	align-items: center;
-	justify-content: center;
-	text-align: left;
-	width: 100vw;
-	left: 0px;
-	bottom: 0px;
-	padding: var(--defaultPadding);
-}
-
 hr {
 	border: 2px solid inherit;
 }
 
-footer > section > a { 
-	margin: 8px; 
-}
-
-footer > section { 
-	padding: calc(var(--defaultPadding) * 2.5 );
-}
 
 a:link{ 
 	text-decoration: underline; 

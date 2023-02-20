@@ -6,7 +6,9 @@
 	<title>Neo Information Technology & Design</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link rel="stylesheet" type="text/css" href="pulsing_button.css">
+	<link rel="stylesheet" type="text/css" href="snackbar.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,25 +17,42 @@
 	<div class="dialog_box_wrapper">
 		<div class="dialog_box">
 			<nav class="dialog_nav">
+				<!-- Dialog buttons -->
 				<section>
-					
-				<code id="window_open_for"></code>
+					<button class="dialog_button" id="refresh_dialog">
+						<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+							<path d="M2,5 S2,-2 4,5 S7,8 8,4" />
+						</svg>
+						Refresh
+					</button>
+					<button class="dialog_button" id="close_dialog">
+						<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+							<path d="M1,1 9,9 M9,1 1,9" />
+						</svg>
+						Close
+					</button>
 				</section>
-				<button class="dialog_button" id="refresh_dialog">&#8635; Refresh</button>
-				<button class="dialog_button" id="close_dialog">X Close</button>
-				<script src="dialog_timer.js"></script>
 			</nav>
+			<!-- Dialog header -->
 			<section class="dialog_header">
-				<h3>Welcome to the Interface World, Neo.</h3>
+				<h3>World Wide Interface</h3>
 			</section>
 
+			<!-- Dialog Body -->
 			<section class="dialog_body">
 				<script src="dialog_msg.js"></script>
 			</section>
-			
+
+			<!-- Dialog footer -->
 			<section class="dialog_footer">
 				<button class="dialog_button" id="select_yes">&#9786; Yes</button>
 				<button class="dialog_button" id="select_no">&#9785; No</button>
+			</section>
+
+			<!-- Dialog window timer -->
+			<section>
+				<code id="window_open_for"></code>
+				<script src="dialog_timer.js"></script>
 			</section>
 		</div>
 		<script src="dialog_box.js"></script>
@@ -42,8 +61,8 @@
 	<main>
 		<div class="headline_and_clock">
 			<section>
-				<img src="icon.svg"/ id="icon_img">
-				<h3 id="headline"> Spirit: Interface Oriented</h3>
+				
+				<h2 id="headline">Spirit: Interface Oriented</h2>
 				<nav class="top_nav">
 					<section>
 						<button class="pulsing_button" id="appointment">Schedule an Appointment.</button>
@@ -60,8 +79,10 @@
 		</div>
 	</main>
 
+	<!-- Primary Footer -->
 	<footer>
 		<section>
+			<img src="icon.svg"/ id="icon_img">
 			<h1>Neo Information Technology & Design</h1>
 			<p>
 				A foundation with an interface-oriented spirit and purpose to utilize design and development to explore current and emerging infrastructures; affects inclusive of all relative dimensions, domains.
