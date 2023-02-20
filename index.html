@@ -3,76 +3,44 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Neo ITD Inc.</title>
+	<title>Neo Information Technology & Design</title>
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="pulsing_button.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-	<style type="text/css">
-		body { 
-			font-family: 'Public Sans', sans-serif; 
-			color: black; 
-			width: 100vw;
-			height:100vh;
-		}
-		main{ 
-			padding: 72px;
-		}
-		h1 { 
-			font-size: 2rem;
-			font-weight:800;
-		}
-		p {
-			line-height: 1.08;
-		}
-		header {  
-			padding: 36px;
-			width: auto;
-			display: flex; 
-			flex-direction: row; 	
-		}
-		footer { 
-			padding: 36px;
-			position: fixed;
-			left:0;
-			bottom: 24px;
-			width: auto;
-			display: flex; 
-			flex-direction: column; 
-		}
-		footer > section > a { 
-			margin: 8px; 
-		}
-		a:link{ 
-			text-decoration: underline; 
-			color: inherit; 
-		}
-		a:visited{ 
-			color: gray; 
-		}
-		a:focus{}
-		a:hover{ 
-			text-decoration: overline; 
-		}
-		a:active{ 
-			color: inherit; 
-		}
-	</style>
 </head>
 <body>
 	<main>
-		<header>
+		<div class="headline_and_clock">
 			<section>
-				<h1>Neo Information Technology & Design</h1>
-				<p>Utilizing design, development and exploration to focus on affecting inefficiencies within current and emerging infrastructures.</p>
+				<img src="icon.svg"/ id="icon_img">
+				<h3 id="headline"> Spirit: Interface Oriented</h3>
+
+				<nav class="top_nav">
+					<section>
+						<button class="pulsing_button" id="appointment">Schedule an Appointment.</button>
+						<button class="pulsing_button" id="join_discord">Join Neo's Discord.</button>
+						<button class="pulsing_button" id="foundation_repo">View Neo's Repository.</button>
+						<button class="pulsing_button" id="general_email">Email Neo.</button>
+					</section>
+					<script src="button_actions.js"></script>
+			</nav>
+				<h2 id="clock"></h2>
+				<script src="clock.js"></script>
 			</section>
-		</header>
-		<footer>
-			<section>
-				<a href="mailto:xyz@neoitd.org">Email</a>
-				<a href="https://www.linkedin.com/company/neo-itd/">LinkedIn</a>
-				<a href="https://github.com/neo-itd">GitHub</a>
-			</section>
-		</footer>
+			
+		</div>
 	</main>
+	<hr>
+	<footer>
+		<section>
+			<h1>Neo Information Technology & Design</h1>
+			<p>
+				A foundation with an inteface-oriented spirit and purpose to utilize design and development to explore current and emerging infrastructures; affects inclusive of all relative dimensions, domains.
+			</p>
+		</section>
+	</footer>
 </body>
 </html>
