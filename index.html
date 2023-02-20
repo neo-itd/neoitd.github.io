@@ -12,56 +12,53 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 </head>
 <body>
-	<div class="dialog_box_wrapper">
-		<div class="dialog_box">
-			<nav class="dialog_nav">
-				<!-- Dialog buttons -->
-				<section>
-					<button class="dialog_button" id="refresh_dialog">
-						<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
-							<path d="M2,5 S2,-2 4,5 S7,8 8,4" />
-						</svg>
-						Refresh
-					</button>
-					<button class="dialog_button" id="close_dialog">
-						<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
-							<path d="M1,1 9,9 M9,1 1,9" />
-						</svg>
-						Close
-					</button>
-				</section>
-			</nav>
-			<!-- Dialog header -->
-			<section class="dialog_header">
-				<h3>World Wide Interface</h3>
-			</section>
-
-			<!-- Dialog Body -->
-			<section class="dialog_body">
-				<script src="dialog_msg.js"></script>
-			</section>
-
-			<!-- Dialog footer -->
-			<section class="dialog_footer">
-				<button class="dialog_button" id="select_yes">&#9786; Yes</button>
-				<button class="dialog_button" id="select_no">&#9785; No</button>
-			</section>
-
-			<!-- Dialog window timer -->
+	<div class="dialog_box" id="draggable_window">
+		<nav class="dialog_nav">
+			<!-- Dialog buttons -->
 			<section>
-				<code id="window_open_for"></code>
-				<script src="dialog_timer.js"></script>
+				<button class="dialog_button" id="refresh_dialog">
+					<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+						<path d="M2,5 S2,-2 4,5 S7,8 8,4" />
+					</svg>
+					Refresh
+				</button>
+				<button class="dialog_button" id="close_dialog">
+					<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+						<path d="M1,1 9,9 M9,1 1,9" />
+					</svg>
+					Close
+				</button>
 			</section>
-		</div>
-		<script src="dialog_box.js"></script>
+		</nav>
+		<!-- Dialog header -->
+		<section class="dialog_header">
+			<h3>World Wide Interface</h3>
+		</section>
+
+		<!-- Dialog Body -->
+		<section class="dialog_body">
+			<script src="dialog_msg.js"></script>
+		</section>
+
+		<!-- Dialog footer -->
+		<section class="dialog_footer">
+			<button class="dialog_button" id="select_yes">&#9786; Yes</button>
+			<button class="dialog_button" id="select_no">&#9785; No</button>
+		</section>
+
+		<!-- Dialog window timer -->
+		<section>
+			<code id="window_open_for"></code>
+		</section>	
 	</div>
-	
+	<script src="dialog_box.js"></script>
+	<script src="dialog_timer.js"></script>
 	<main>
 		<div class="headline_and_clock">
 			<section>
-				
 				<h2 id="headline">Spirit: Interface Oriented</h2>
 				<nav class="top_nav">
 					<section>

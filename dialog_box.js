@@ -1,21 +1,54 @@
-const parent_to_dialog = document.querySelector(".dialog_box_wrapper");
-const dialog_box = document.querySelector(".dialog_box");
+// const parent_to_dialog = document.querySelector(".dialog_box_wrapper");
+const draggable_window = document.querySelector("#draggable_window");
 const neoBlack = "var(--neoBlack)";
 const neoCanvas = "var(--neoCanvas)";
 const calmTransition = "all 1.24s";
-const dialog_box_nav_buttons = document.querySelectorAll(".dialog_button");
 
+const position = { x: 0, y: 0 }
+interact(draggable_window).draggable({
+  listeners: {
+    start (event) {
+      console.log(event.type, event.target)
+    },
+    move (event) {
+      position.x += event.dx
+      position.y += event.dy
+      event.target.style.transform =
+        `translate(${position.x}px, ${position.y}px)`
+    },
+  }
+})
+
+const button_text = {
+	refresh_dialog: { 
+	    default:`<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+						<path d="M2,5 S2,-2 4,5 S7,8 8,4" />
+					</svg>
+					Refresh`, 
+		alt: "Refresh Content." 
+	},
+
+	close_dialog: {
+	    default:`<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+						<path d="M1,1 9,9 M9,1 1,9" />
+					</svg>
+					Close`,
+	    alt: `Close to proceed.`
+	}
+};
+// 
+const dialog_box_nav_buttons = document.querySelectorAll(".dialog_button");
 dialog_box_nav_buttons.forEach((button)=>{
-	
 	// Event Listener: mouseover
 	button.addEventListener('mouseover', ()=>{
 		button.style.background = neoBlack;
 		button.style.color = neoCanvas;
-		button.style.transition = calmTransition;
 		switch (button.id) {
 		    case "refresh_dialog":
+		    	button.innerHTML = button_text.refresh_dialog.alt;
 		    	break;
 		    case "close_dialog":
+		    	button.innerHTML = button_text.close_dialog.alt;
 		    	break;
 		    case "select_yes":
 		    	break;
@@ -31,8 +64,10 @@ dialog_box_nav_buttons.forEach((button)=>{
 		button.style.color = neoBlack;
 		switch (button.id) {
 		    case "refresh_dialog":
+		    	button.innerHTML = button_text.refresh_dialog.default;
 		    	break;
 		    case "close_dialog":
+		    	button.innerHTML = button_text.close_dialog.default;
 		    	break;
 		    case "select_yes":
 		    	break;
@@ -49,9 +84,7 @@ dialog_box_nav_buttons.forEach((button)=>{
 		    	break;
 		    case "close_dialog":
 		    	console.log("Dialog Window closed.");
-		    	parent_to_dialog.style.zIndex = -2;
-		    	document.body.classList.remove(parent_to_dialog.class);
-		    	dialog_box.style.visibility = "hidden";
+		    	draggable_window.classList.toggle("close_window");
 		    	break;
 		    case "select_yes":
 		    	break;
@@ -64,46 +97,4 @@ dialog_box_nav_buttons.forEach((button)=>{
 });
 
 
-// Make the dialog box draggable, manage cursor position. 
-dragElement(dialog_box);
-function dragElement(element) {
-  let pos1 = 0;
-  let pos2 = 0;
-  let pos3 = 0;
-  let pos4 = 0;
 
-  if (element) {
-    element.onmousedown = dragMouseDown;
-  } else {
-    element.onmousedown = dragMouseDown;
-  }
-
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    console.log("Getting the cursor position @ startup.");
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    document.onmousemove = elementDrag;
-  }
-
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    //  console.log("Calculating new cursor position.");
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // console.log("Setting the elements new position.");
-    element.style.top = `${element.offsetTop - pos2}px`;
-    element.style.left = `${element.offsetLeft - pos1}px`;
-  }
-
-  function closeDragElement() {
-    console.log("Mouse released. Stopping movement.");
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
