@@ -18,3 +18,5 @@ function update_time(){
 	}
 	return { element: clockElement, date: date };
 }
+
+

@@ -12,12 +12,38 @@
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+	<div class="dialog_box_wrapper">
+		<div class="dialog_box">
+			<nav class="dialog_nav">
+				<section>
+					
+				<code id="window_open_for"></code>
+				</section>
+				<button class="dialog_button" id="refresh_dialog">&#8635; Refresh</button>
+				<button class="dialog_button" id="close_dialog">X Close</button>
+				<script src="dialog_timer.js"></script>
+			</nav>
+			<section class="dialog_header">
+				<h3>Welcome to the Interface World, Neo.</h3>
+			</section>
+
+			<section class="dialog_body">
+				<script src="dialog_msg.js"></script>
+			</section>
+			
+			<section class="dialog_footer">
+				<button class="dialog_button" id="select_yes">&#9786; Yes</button>
+				<button class="dialog_button" id="select_no">&#9785; No</button>
+			</section>
+		</div>
+		<script src="dialog_box.js"></script>
+	</div>
+	
 	<main>
 		<div class="headline_and_clock">
 			<section>
 				<img src="icon.svg"/ id="icon_img">
 				<h3 id="headline"> Spirit: Interface Oriented</h3>
-
 				<nav class="top_nav">
 					<section>
 						<button class="pulsing_button" id="appointment">Schedule an Appointment.</button>
@@ -33,13 +59,15 @@
 			
 		</div>
 	</main>
-	<hr>
+
 	<footer>
 		<section>
 			<h1>Neo Information Technology & Design</h1>
 			<p>
 				A foundation with an interface-oriented spirit and purpose to utilize design and development to explore current and emerging infrastructures; affects inclusive of all relative dimensions, domains.
 			</p>
+			<code id="date_of_update"></code>
+			<script src="date_modified.js"></script>
 		</section>
 	</footer>
 </body>
