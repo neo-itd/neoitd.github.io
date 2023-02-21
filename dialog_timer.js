@@ -16,7 +16,7 @@ let window_interval = setInterval(run_timer, timer.milliseconds);
 function run_timer(){
 	// check_if_window_closed();
 	timer.increment();
-	dialog_element.innerHTML= `Window open for ${timer.seconds} seconds, Closing in ${timer.max_open - timer.seconds} seconds.`;
+	dialog_element.innerHTML= `Window open for ${timer.seconds} seconds<br/>Closing in ${timer.max_open - timer.seconds}.`;
 	if (timer.seconds >= timer.max_open || window_closed){
 		// stop_timer(window_interval);
 	}

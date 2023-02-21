@@ -3,17 +3,19 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Neo Information Technology & Design</title>
+	<title>Neo Interface Technology & Design</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
 	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link rel="stylesheet" type="text/css" href="pulsing_button.css">
+	<link rel="stylesheet" type="text/css" href="modals.css">
 	<link rel="stylesheet" type="text/css" href="snackbar.css">
+	<link rel="stylesheet" type="text/css" href="footer.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- Dialog Box -->
 	<div class="dialog_box" id="draggable_window">
 		<nav class="dialog_nav">
 			<!-- Dialog buttons -->
@@ -34,7 +36,7 @@
 		</nav>
 		<!-- Dialog header -->
 		<section class="dialog_header">
-			<h3>World Wide Interface</h3>
+			<h3>First encounter:</h3>
 		</section>
 		<!-- Dialog Body -->
 		<section class="dialog_body">
@@ -50,18 +52,86 @@
 			<code id="window_open_for"></code>
 		</section>	
 	</div>
+	<!-- ------------------------------------------------------------------------------- -->
+	<!-- Modals -->
+	<!-- Modal: Appointment -->
+	<div class="modal" id="appointment_modal">
+		<div class="modal_content">
+			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+				<path d="M1,1 9,9 M9,1 1,9" /> Close
+			</svg>
+			<section>
+				<form class="appointment_form">
+					<section>
+						<label>Your Name</label>
+						<input type="text" name="" id="form_input">
+					</section>
+
+					<section>
+						<label>Reason for Appointment (Brief context here)</label>
+						<input type="text" name="" id="form_input">
+					</section>
+
+					<section>
+						<label>Appointment Date</label>
+						<input type="date" name="" id="form_input">
+					</section>
+
+					<section>
+						<label>Appointment Time</label>
+						<input type="time" name="" id="form_input">
+					</section>
+
+					<section>
+						<button type="submit" class="modal_button" id="form_submit">Submit Request</button>
+					</section>
+				</form>
+			</section>
+		</div>
+	</div>
+
+	<!-- Modal: Discord -->
+	<div class="modal" id="discord_modal">
+		<div class="modal_content">
+			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+				<path d="M1,1 9,9 M9,1 1,9" /> Close
+			</svg>
+			<section></section>
+		</div>
+	</div>
+	<!-- Modal: Public Repo -->
+	<div class="modal" id="public_repo">
+		<div class="modal_content">
+			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+				<path d="M1,1 9,9 M9,1 1,9" /> Close
+			</svg>
+			<section></section>
+		</div>
+	</div>
+	<!-- Modal: Communication Key -->
+	<div class="modal" id="comm_key">
+		<div class="modal_content">
+			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+				<path d="M1,1 9,9 M9,1 1,9" /> Close
+			</svg>
+			<section></section>
+		</div>
+	</div>
+	<!-- ------------------------------------------------------------------------------- -->
+	<!-- Main Interface -->
 	<main>
 		<div class="headline_and_clock">
 			<section class="headline_and_clock_flex">
 				<nav class="top_nav">
 					<section>
-						<h2 id="headline">Spirit: Interface Oriented</h2>
+						<h2 id="headline">World Wide Interface</h2>
 					</section>
 					<section class="nav_buttons">
-						<button class="pulsing_button" id="appointment">Sync Timers.</button>
+						<p id="nav_instruction">Select any button to trigger an interaction.</p>
+						<button class="pulsing_button" id="appointment">Let's Sync Time</button>
 						<button class="pulsing_button" id="join_discord">Discord</button>
-						<button class="pulsing_button" id="foundation_repo">Publicitory</button>
-						<button class="pulsing_button" id="general_email"> [ enter the communication key ]</button>
+						<button class="pulsing_button" id="public_repo">Publicitory</button>
+						<button class="pulsing_button" id="comm_key"> [ enter the communication key ]</button>
 					</section>	
 				</nav>
 				<section class="clock">
@@ -69,23 +139,26 @@
 				</section>
 				<footer>
 					<section>
-						<img src="icon.svg"/ id="icon_img">
-						<h1>Neo Information Technology & Design</h1>
-						<p>
-							A foundation with an interface-oriented spirit. Our purpose is utilizing design and development for the exploration of current and emerging infrastructures; inclusive of all relative dimensions, domains.
-						</p>		
+						<a href="index.html">
+							<img src="NeoWWIIconBlack.svg" id="icon_img">
+						</a>
+						<h1>Neo Interface Technology & Design</h1>
+						<p>A foundation with an interface-oriented spirit. Neo's purpose? Utilize design and development for the exploration of current and emerging infrastructures; inclusive of all relative dimensions, domains.</p>
+						<code id="date_of_update"></code>	
 					</section>
 				</footer>
 			</section>
 		</div>
 	</main>
+	<!-- ------------------------------------------------------------------------------- -->
+	<!-- JavaScript Modules -->
+	<script src="neoitd.js"></script>
 	<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
 	<script src="dialog_box.js"></script>
 	<script src="dialog_timer.js"></script>
-	<code id="date_of_update"></code>
 	<script src="date_modified.js"></script>
-	<script src="button_actions.js"></script>
 	<script src="window_resize.js"></script>
 	<script src="clock.js"></script>
+	<script src="button_actions.js"></script>
 </body>
 </html>
