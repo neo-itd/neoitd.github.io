@@ -4,21 +4,19 @@
     @purpose Footer style sheet.
  */
 footer { 
+/*	border: 1px solid black;*/
 	display: flex; 
-	position: fixed;
-	flex-direction: row; 
-	z-index: -1;
+	flex-direction: column; 
 	align-items: center;
 	justify-content: space-evenly;
-	text-align: center;
-	width: 100%;
-	left: 0;
-	bottom: 0;
+/*	text-align: left;*/
 }
-footer p {}
+footer p {
+	padding: calc(var(--defaultPadding) + 0.25vw);
+}
 footer > section > a { 
 	margin: 8px; 
 }
 footer > section { 
-	padding: calc(var(--defaultPadding) * 2.5 );
+/*	padding: calc(var(--defaultPadding) * 2.5 );*/
 }

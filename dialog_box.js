@@ -84,7 +84,9 @@ dialog_box_nav_buttons.forEach((button)=>{
 		    	break;
 		    case "close_dialog":
 		    	console.log("Dialog Window closed.");
-		    	draggable_window.classList.toggle("close_window");
+		    	draggable_window.style.visibility= "hidden";
+		    	// draggable_window.classList.value = false;
+		    	// draggable_window.classList.toggle("close_window");
 		    	break;
 		    case "select_yes":
 		    	break;
