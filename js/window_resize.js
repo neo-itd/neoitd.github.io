@@ -1,9 +1,9 @@
 /* 
-    @name button_actions.js
-    @purpose
+    @name window_resize.js
+    @purpose Handle window resizing.
     @date 2023 02 20
 */
-
+//-------------------------------------------------------------------
 /*
 window.addEventListener("resize", reset_window);
 function reset_window(){

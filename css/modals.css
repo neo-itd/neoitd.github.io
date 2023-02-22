@@ -1,4 +1,7 @@
-.modal {
+.appointment_modal,
+.discord_modal,
+.repo_modal,
+.comm_key_modal {
   display: none;
   position: fixed; 
   inset-block-start: 50%;
@@ -22,6 +25,7 @@
 }
 
 #form_input {
+	padding: 4px;
 	font-family: "Menlo", monospace;
 	border: 2px solid var(--neoBlack);
 	font-size: 1.00rem;
@@ -44,13 +48,13 @@
 
 .modal_button {
 	transition: all 0.96s;
-    box-shadow: 0 2px 8px rgba(32,32,32 0.2);
+  box-shadow: 0 2px 8px rgba(32,32,32 0.2);
 }
 
 .modal_button:hover {
-    animation: 2.88s ease-in infinite pulse;
-    box-shadow: 0 10px 20px rgba(32,32,32 0.2);
-    cursor: pointer;
+  animation: 2.88s ease-in infinite pulse;
+  box-shadow: 0 10px 20px rgba(32,32,32 0.2);
+  cursor: pointer;
 }
 
 .model_content {
@@ -89,7 +93,12 @@ label {
 	justify-content: space-evenly;
 }
 
-#close_modal {
+#appointment_modal_close, 
+#discord_modal_close, 
+#repo_modal_close,
+#comm-key_modal_close{}
+
+.close_modal {
 	position: absolute;
 	top: 20px;
 	left: 20px;
@@ -97,10 +106,8 @@ label {
 	float: right;
 	font-size: 2rem;
 }
-
-#close_modal:hover,
-#close_modal:focus {
-  color: black;
+.close_modal:hover,
+.close_modal:focus {
   text-decoration: none;
   cursor: pointer;
 }
