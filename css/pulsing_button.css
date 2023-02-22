@@ -1,0 +1,28 @@
+/* 
+    @name pulsing_button.css 
+    @date 2023 02 20
+    @purpose Handles styling of pulsing buttons
+ */
+
+
+.pulsing_button {}
+.pulsing_button:hover{}
+.pulsing_button:active {}
+
+button {
+	font-family: 'Public Sans', sans-serif; 
+	font-weight: 500;
+	width: auto;
+	border: 2px solid var(--neoBlack);
+	font-size: 1.00rem;
+	color: inherit;
+	border-radius: 4px;
+	padding: 4px;
+	margin: 8px;
+	background: none;
+}
+
+@keyframes pulse{
+	from{ transform: scale(1.0); }
+	to{ transform: scale(1.1); }
+}

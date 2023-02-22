@@ -5,27 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Neo Interface Technology & Design</title>
 	<link rel="icon" type="image/x-icon" href="favicon.ico">
-	<link rel="stylesheet" type="text/css" href="main.css">
-	<link rel="stylesheet" type="text/css" href="pulsing_button.css">
-	<link rel="stylesheet" type="text/css" href="modals.css">
-	<link rel="stylesheet" type="text/css" href="snackbar.css">
-	<link rel="stylesheet" type="text/css" href="footer.css">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/main.css">
+	<link rel="stylesheet" type="text/css" href="./css/pulsing_button.css">
+	<link rel="stylesheet" type="text/css" href="./css/modals.css">
+	<link rel="stylesheet" type="text/css" href="./css/snackbar.css">
+	<link rel="stylesheet" type="text/css" href="./css/footer.css">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+	<!-- ------------------------------------------------------------------------------- -->
 	<!-- Dialog Box -->
 	<div class="dialog_box" id="draggable_window">
 		<nav class="dialog_nav">
 			<!-- Dialog buttons -->
 			<section>
-				<button class="dialog_button" id="refresh_dialog">
-					<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
-						<path d="M2,5 S2,-2 4,5 S7,8 8,4" />
-					</svg>
-					Refresh
-				</button>
 				<button class="dialog_button" id="close_dialog">
 					<svg viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
 						<path d="M1,1 9,9 M9,1 1,9" />
@@ -40,7 +36,7 @@
 		</section>
 		<!-- Dialog Body -->
 		<section class="dialog_body">
-			<script src="dialog_msg.js"></script>
+			
 		</section>
 		<!-- Dialog footer -->
 		<section class="dialog_footer">
@@ -55,16 +51,24 @@
 	<!-- ------------------------------------------------------------------------------- -->
 	<!-- Modals -->
 	<!-- Modal: Appointment -->
-	<div class="modal" id="appointment_modal">
+	<div class="appointment_modal" id="appointment_modal">
 		<div class="modal_content">
-			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+			<svg class="close_modal" id="appointment_modal_close" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
 				<path d="M1,1 9,9 M9,1 1,9" /> Close
 			</svg>
+			<section>
+				<h3>Time is a dimension, let's schedule a Sync.</h3>
+			</section>
 			<section>
 				<form class="appointment_form">
 					<section>
 						<label>Your Name</label>
 						<input type="text" name="" id="form_input">
+					</section>
+
+					<section>
+						<label for="email">Your Email</label>
+						<input type="email" name="" id="form_input">
 					</section>
 
 					<section>
@@ -91,27 +95,27 @@
 	</div>
 
 	<!-- Modal: Discord -->
-	<div class="modal" id="discord_modal">
+	<div class="discord_modal" id="discord_modal">
 		<div class="modal_content">
-			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+			<svg class="close_modal" id="discord_modal_close" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
 				<path d="M1,1 9,9 M9,1 1,9" /> Close
 			</svg>
 			<section></section>
 		</div>
 	</div>
 	<!-- Modal: Public Repo -->
-	<div class="modal" id="public_repo">
+	<div class="repo_modal" id="public_repo_modal">
 		<div class="modal_content">
-			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+			<svg class="close_modal" id="repo_modal_close" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
 				<path d="M1,1 9,9 M9,1 1,9" /> Close
 			</svg>
 			<section></section>
 		</div>
 	</div>
 	<!-- Modal: Communication Key -->
-	<div class="modal" id="comm_key">
+	<div class="comm_key_modal" id="comm_key_modal">
 		<div class="modal_content">
-			<svg id="close_modal" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
+			<svg class="close_modal" id="comm_key_modal_close" viewBox="0 0 10 10" width="0.75em" height="0.75em" stroke="currentColor" stroke-width="2">
 				<path d="M1,1 9,9 M9,1 1,9" /> Close
 			</svg>
 			<section></section>
@@ -122,11 +126,12 @@
 	<main>
 		<div class="headline_and_clock">
 			<section class="headline_and_clock_flex">
+				<section>
+					<h2 id="tagline">World Wide Interface</h2>
+				</section>
+
 				<nav class="top_nav">
-					<section>
-						<h2 id="headline">World Wide Interface</h2>
-					</section>
-					<section class="nav_buttons">
+						<section class="nav_buttons">
 						<p id="nav_instruction">Select any button to trigger an interaction.</p>
 						<button class="pulsing_button" id="appointment">Let's Sync Time</button>
 						<button class="pulsing_button" id="join_discord">Discord</button>
@@ -134,17 +139,20 @@
 						<button class="pulsing_button" id="comm_key"> [ enter the communication key ]</button>
 					</section>	
 				</nav>
-				<section class="clock">
-					<h2 id="clock">00:00:00</h2>		
+
+				<section class="clock">	
+					<code id="clock_text">HOURS:MINUTES:SECONDS</code>
+					<h2 id="clock">00:00:00</h2>	
 				</section>
+				
 				<footer>
 					<section>
 						<a href="index.html">
 							<img src="NeoWWIIconBlack.svg" id="icon_img">
 						</a>
-						<h1>Neo Interface Technology & Design</h1>
+						<h1 id="headline">Neo Interface Technology & Design</h1>
 						<p>A foundation with an interface-oriented spirit. Neo's purpose? Utilize design and development for the exploration of current and emerging infrastructures; inclusive of all relative dimensions, domains.</p>
-						<code id="date_of_update"></code>	
+						<code id="date_of_update"></code>
 					</section>
 				</footer>
 			</section>
@@ -152,13 +160,14 @@
 	</main>
 	<!-- ------------------------------------------------------------------------------- -->
 	<!-- JavaScript Modules -->
-	<script src="neoitd.js"></script>
+	<script src="./js/index.js"></script>
 	<script src="https://unpkg.com/interactjs/dist/interact.min.js"></script>
-	<script src="dialog_box.js"></script>
-	<script src="dialog_timer.js"></script>
-	<script src="date_modified.js"></script>
-	<script src="window_resize.js"></script>
-	<script src="clock.js"></script>
-	<script src="button_actions.js"></script>
+	<script src="./js/dialog_box.js"></script>
+	<script src="./js/dialog_msg.js"></script>
+	<script src="./js/dialog_timer.js"></script>
+	<script src="./js/date_modified.js"></script>
+	<script src="./js/window_resize.js"></script>
+	<script src="./js/clock.js"></script>
+	<script src="./js/button_actions.js"></script>
 </body>
 </html>
