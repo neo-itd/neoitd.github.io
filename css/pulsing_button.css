@@ -5,7 +5,18 @@
  */
 
 
-.pulsing_button {}
+.pulsing_button {
+	font-family: 'Public Sans', sans-serif; 
+	font-weight: 500;
+	width: auto;
+	border: 2px solid var(--neoBlack);
+	font-size: 0.96rem;
+	color: inherit;
+	border-radius: 8px;
+	padding: 4px;
+	margin: 8px;
+	background: none;
+}
 .pulsing_button:hover{}
 .pulsing_button:active {}
 

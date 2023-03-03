@@ -10,16 +10,16 @@ const primary_button = {
     appointment: { default: "Let's Sync Time", alt: "Prepare a Calendar Invite" },
     join_discord: { default: "Discord", alt: "Welcome to an inner network." },
     public_repo: { default: "Publicitory", alt: "View Project files and Documentation." },
-    comm_key: { default: "[ enter the communication key ]", alt: "You know the key?" }
+    comm_key: { default: "[ enter the communication key ]", alt: "Check console for key the key?" }
 }
 pulsing_buttons.forEach((button)=>{
     button.addEventListener('mouseover', ()=>{
-        setup_style_changes( button,
-                             "var(--neoBlack)", 
-                             "var(--neoCanvas)",
-                             "var(--neoCanvas)",
-                             "var(--neoCanvas)",
-                             "1.72s ease-in infinite pulse");
+        // setup_style_changes( button,
+        //                      "var(--neoBlack)", 
+        //                      "var(--neoCanvas)",
+        //                      "var(--neoCanvas)",
+        //                      "var(--neoCanvas)",
+        //                      "1.72s ease-in infinite pulse");
         switch (button.id){
             case "appointment":
                 update_inner_html(button, primary_button.appointment.alt);
@@ -88,7 +88,7 @@ pulsing_buttons.forEach((button)=>{
 });
 // -----------------------------------------------------------------------
 function setup_style_changes( element,
-                              bg_color, 
+                              bg_color="inherit", 
                               text_color, 
                               button_color, 
                               button_border, 

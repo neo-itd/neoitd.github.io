@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Neo Interface Technology & Design</title>
+	<link rel="icon" type="image/x-icon" href="../favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="../css/main.css">
+	<link rel="stylesheet" type="text/css" href="../css/pulsing_button.css">
+	<link rel="stylesheet" type="text/css" href="../css/modals.css">
+	<link rel="stylesheet" type="text/css" href="../css/snackbar.css">
+	<link rel="stylesheet" type="text/css" href="../css/footer.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/jobs_and_careers.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+	<!-- ------------------------------------------------------------------------------- -->
+	<!-- Main Interface -->
+	<header>
+		<section>
+			<h1 id="title" onclick="window.location.replace('../index.html');">Neo Interface Technology & Design</h1>
+			<p>Neo is an interface-spirited design foundation. Neo utilizes design and engineering as a means to research and develop expressible elements; these "expressible elements” are presented as functional prototypes, artifacts, products, and applications.</p>
+		</section>
+	</header>
+
+	<div class="header_tagline">
+		<section>
+			<h2 id="tagline">&#10084; Design & Function</h2>
+			<p id="window_details">
+				<span id="host_name"></span>
+			</p>
+		</section>
+	</div>
+	
+	<div class="jobs_and_careers">
+		<section>
+			<section>
+				<p id="foundation_size">People working with the foundation: <span id="raw_number">99</span>.</p>
+			</section>
+			<section>
+				<h2 id="job_title">Oracle Policy Assistant, Media Interface</h2>
+				<section class="job_overview">
+					<h3 id="interface_assigned_to">
+						<span>Focus:</span>
+						<a href="">Media Interface Domains</a> 
+					</h3>
+					<h3 id="compensation_structure">
+						<span>Compensation package: </span>
+						<a href="">Domain Equity</a>
+					</h3>
+				</section>
+					<p id="description">
+						<span>Description:</span>
+						The Oracle Policy Assistant does...This is an 
+						<a href="">Oracle-level</a> role.
+					</p>
+			</section>
+			<section>
+				<button class="jobs_and_careers_button" id="apply">&#9635; Apply</button>
+				<button class="jobs_and_careers_button" id="recommend">&#9635; Recommend Someone</button>
+				<button class="jobs_and_careers_button" id="save" onclick="save_to_local_storage()">&#9635; Save To Session</button>
+				<button class="jobs_and_careers_button" id="another_role" onclick="show_another_role()">&#9635; See Another Role</button>
+			</section>
+		</section>
+	</div>
+	<footer>
+			<nav class="footer_nav">	
+				<h5>Other Navigation</h5>
+				<a href="../index.html" class="footer_link" id="interfaces">&#8627; View Interfaces</a>
+				<a href="./html/jobs_and_careers.html" class="footer_link" id="jobs_and_careers">&#8627; Jobs & Careers</a>
+				<a href="../index.html" class="footer_link" id="support">&#8627; Supporting the Foundation</a>
+				<a href="https://github.com/neo-itd" target="_blank" class="footer_link" id="github">&#8627; Public Repository</a>
+				<!-- <a href="" class="footer_link" id="twitter">&#8627; Twitter</a> -->
+				<a href="mailto:xyz@neoitd.org" class="footer_link" id="email">&#8627; Email</a>
+				<p id="date_of_update"></p>
+			</nav>
+	</footer>
+	<!-- ------------------------------------------------------------------------------- -->
+	<!-- JavaScript Modules -->
+	<script src="../js/index.js"></script>
+	<script src="../js/date_modified.js"></script>
+	<script src="../js/window_resize.js"></script>
+	<script src="../js/button_actions.js"></script>
+</body>
+</html>

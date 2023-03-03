@@ -1,0 +1,44 @@
+.jobs_and_careers {
+	z-index: -1;
+	position: fixed;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid black;
+}
+.job_overview{
+	align-items: center;
+	justify-content: space-evenly;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+/*	border: 1px solid black;*/
+}
+.jobs_and_careers_button {
+    font-family: 'Public Sans', sans-serif; 
+    font-weight: 500;
+    width: auto;
+    border: 2px solid var(--neoBlack);
+    font-size: 1.00rem;
+    color: var(--neoBlack);
+    border-radius: 4px;
+    padding: 4px;
+    margin: 8px;
+    background: none;
+}
+.jobs_and_careers_button:hover{
+    color: var(--neoCanvas);
+    background: var(--neoBlack);
+}
+.jobs_and_careers_button:active{
+    scale:0.96;
+}
+#job_title{
+	font-size: 2.32rem;
+	font-weight: 420;
+}

@@ -9,7 +9,8 @@ class Footer {
 	static update_date(year, month, day, hour){
 		const footer_date = document.querySelector("#date_of_update");
 		const date_updated = new Date(year, month, day, hour);
-		footer_date.innerHTML = `Last Modified: ${date_updated}`;
+		// const date_updated = window.document.lastModified;
+		footer_date.innerHTML = `Last Modified: ${ date_updated }`;
 	}
 }
-Footer.update_date(2023, 1, 22, 1)
+Footer.update_date(2023, 2, 3, 11);

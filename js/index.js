@@ -19,3 +19,6 @@ function setup_button_style(element, bg_color, text_color){
     element.style.background = bg_color;
     element.style.color = text_color;
 }
+//-------------------------------------------------------------------
+const host_name = document.querySelector("#host_name");
+host_name.innerHTML = window.document.domain;
